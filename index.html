@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador do BI</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <div class="principal">
+            <div class="topo">
+                <h1>Verificar os Dados do Bilhete de Identidade</h1>
+                <p>Verifique e consulte os dados do seu bilhete online e a qualquer momento que desejar, apenas com o
+                    seu número do BI.</p>
+                <div class="card">
+                    <h2>Consultar Dados do BI</h2>
+                    <form action="#">
+                        <div class="input-group">
+                            <label for="numero-bi">Número do BI</label>
+                            <input type="text" name="numero-bi" id="numero-bi">
+                        </div>
+                        <button>Verificar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="bilhetes">
+            <div class="bilhete-frontal">
+                <div class="imgs">
+                    <img src="assets/image/insignia-angola.jpg" alt="Insignia de Angola">
+
+                    <img src="assets/image/angola-mapa.jpg" alt="Mapa de Angola">
+                </div>
+
+                <div class="bilhete-dados">
+                    <span class="titulo">Nome Completo:</span>
+                    <div class="dados" id="nome-completo">
+                        <span id="primeiro-nome">EPIFÂNIO</span>
+                        <span id="ultimo-nome">LOURENÇO FRANCISCO</span>
+                    </div>
+                    <span class="titulo">Filiação:</span>
+                    <div class="dados" id="filiacao">
+                        <span id="primeiro-nome-pai">JOÃO EUSÉBIO</span>
+                        <span id="ultimo-nome-pai"> DOMINGOS FRANCISCO</span>
+                    </div>
+                    <span class="titulo">e</span>
+                    <div class="dados" id="e-filiacao">
+                        <span id="primeiro-nome-mae">JOSINA LAURA</span>
+                        <span id="ultimo-nome-mae">LOURENÇO FRANCISCO</span>
+                    </div>
+                    <span class="titulo">Bilhete de Identidade Nº</span>
+                    <div class="dados" id="bilhete-identidade">
+                        <span id="numero-bi">009511030LA048</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bilhete-traseiro">
+
+                <div class="bilhete-dados">
+
+                    <div class="dados">
+                        <span class="titulo">Residência:</span>
+                        <span id="endereco-residencia">CASA S/Nº</span>
+                        
+                        <br> <span id="bairro-residencia">SAPÚ II</span>
+                        <br> <span id="municipio-residencia">KILAMBA KIAXI</span>
+                    </div>
+
+                    <div class="dados">
+                        <span class="titulo">Natural de:</span>
+                        <span id="municipio-nascimento">INGOMBOTAS</span>
+                        <br> <span id="municipio-nascimento">INGOMBOTAS</span>
+                    </div>
+
+                    <div class="dados">
+                        <span class="titulo">Província de:</span>
+                        <span id="provincia-nascimento">LUANDA</span>
+                    </div>
+
+                    <div class="dados">
+                        <span class="titulo">Data de Nascimento:</span>
+                        <span id="data-nascimento">29/11/2003</span>
+                    </div>
+
+
+                    <div class="dados">
+                        <span class="titulo">Sexo:</span>
+                        <span id="sexo">MASCULINO</span>
+
+                        <span class="titulo">Altura:</span>
+                        <span id="altura">0</span>
+                    </div>
+
+                    <div class="dados">
+                        <span class="titulo">Estado Civil:</span>
+                        <span id="estado-civil">SOLTEIRO</span>
+                    </div>
+
+                    <div class="dados">
+                        <span class="titulo">Emitido em:</span>
+                        <span id="data-emissao">29/11/2003</span>
+
+                        <span class="titulo">Válido até:</span>
+                        <span id="data-validade">29/11/2003</span>
+                    </div>
+
+                    <div class="dados">
+                        <span class="titulo">DIRECTOR NACIONAL DE IDENTIFICAÇÃO</span>
+                        <div class="codigo-barra"><img src="assets/image/codigo-barra.jpg" alt="Código de barras"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 - Epifânio Francisco</p>
+        <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="https://www.facebook.com/ACEDE-105470194242383/?ref=pages_you_manage" target="_blank">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>        
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="https://github.com/epifaniofrancisco" target="_blank">
+                            <li class="item-social-media">
+                                <i class="fab fa-github"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+    </footer>
+
+</body>
+
+</html>
