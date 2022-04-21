@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 :root {
@@ -17,7 +18,7 @@ main {
 /* Primeiro elemento */
 .principal {
     width: 100%;
-    height: 403px;
+    height: 90vh;
     background-color: white;
 }
 
@@ -46,12 +47,13 @@ main {
     height: 250px;
     background-color: white;
     color: black;
-    border: 1px solid black;
+    border: 0.5px solid black;
     position: absolute;
     top: 210px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .topo .card h2 {
@@ -77,6 +79,7 @@ main {
     font-size: 20px;
     display: block;
     padding: 0.75rem;
+    border: 1px solid black;
     border-radius: 5px;
     margin-bottom: 15px;
 }
@@ -104,11 +107,25 @@ main {
     width: 100%;
     height: 405px;
     background: var(--gradient);
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
     padding: 0px 32px;
+    animation-name: animar;
+    animation-duration: .8s;
+    animation-fill-mode: both;
+}
+
+/* Animação */
+@keyframes animar {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -240,4 +257,180 @@ footer p {
     line-height: 40px;
     text-align: center;
     color: white;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1100px) {
+    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
+        width: 450px;
+    }
+
+    main .bilhetes .bilhete-frontal .titulo, main .bilhetes .bilhete-traseiro .dados .titulo {
+        font-size: 16px;
+    }
+
+    main .bilhetes .bilhete-frontal span, main .bilhetes .bilhete-traseiro .dados span {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
+        width: 400px;
+    }
+
+    main .bilhetes .bilhete-traseiro .dados .codigo-barra {
+        height: 30px;
+        margin-top: 2px;
+    } 
+}
+
+@media screen and (max-width: 900px) {
+    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
+        width: 370px;
+    }
+
+    main .bilhetes .bilhete-frontal .titulo, main .bilhetes .bilhete-traseiro .dados .titulo {
+        font-size: 14px;
+    }
+
+    main .bilhetes .bilhete-frontal span, main .bilhetes .bilhete-traseiro .dados span {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main .topo h1 {
+        font-size: 26px;
+    }
+
+    main .topo p {
+        width: 500px;
+        font-size: 16px;
+    }
+
+    main .topo .card {
+        width: 450px;
+    }
+
+    main .topo .card form {
+        width: 400px;
+    }
+
+    main .bilhetes {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
+        width: 500px;
+        height: 100%;
+        margin-top: 42px;
+    }
+
+    main .bilhetes .bilhete-traseiro {
+        margin-bottom: 42px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    main .topo h1 {
+        font-size: 22px;
+    }
+
+    main .topo p {
+        width: 450px;
+        font-size: 15px;
+    }
+
+    main .topo .card {
+        width: 430px;
+    }
+
+    main .topo .card form {
+        width: 380px;
+    }
+
+    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
+        width: 450px;
+        height: 100%;
+        margin-top: 42px;
+    }
+
+    main .bilhetes .bilhete-traseiro {
+        margin-bottom: 42px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main .topo h1 {
+        font-size: 20px;
+    }
+
+    main .topo p {
+        width: 400px;
+        font-size: 14px;
+    }
+
+    main .topo .card {
+        width: 400px;
+    }
+
+    main .topo .card form {
+        width: 350px;
+    }
+
+    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
+        width: 400px;
+        height: 100%;
+        margin-top: 42px;
+    }
+
+    main .bilhetes .bilhete-traseiro {
+        margin-bottom: 42px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main .topo h1 {
+        font-size: 17px;
+    }
+
+    main .topo p {
+        width: 330px;
+        font-size: 13px;
+    }
+
+    main .topo .card {
+        width: 300px;
+    }
+
+    main .topo .card form {
+        width: 280px;
+    }
+
+    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
+        width: 340px;
+        height: 100%;
+        margin-top: 42px;
+    }
+
+    main .bilhetes .bilhete-traseiro {
+        margin-bottom: 42px;
+    }
+
+    main .bilhetes .bilhete-frontal .titulo, main .bilhetes .bilhete-traseiro .dados .titulo {
+        font-size: 14px;
+    }
+
+    main .bilhetes .bilhete-frontal span, main .bilhetes .bilhete-traseiro .dados span {
+        font-size: 13px;
+    }
+    
+    main .bilhetes .bilhete-traseiro .dados .codigo-barra {
+        width: 150px;
+        height: 22px;
+    }
 }
