@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/consumingAPI.js" defer></script>
 </head>
 
 <body>
@@ -23,8 +24,8 @@
                     <h2>Consultar Dados do BI</h2>
                     <form action="#">
                         <div class="input-group">
-                            <label for="numero-bi">Número do BI</label>
-                            <input type="text" name="numero-bi" id="numero-bi" required>
+                            <label for="numero-bi-input">Número do BI</label>
+                            <input type="text" name="numero-bi-input" id="numero-bi-input" required>
                             <span class="error"></span>
                         </div>
                         <button type="submit" id="verificar">Verificar</button>
@@ -71,7 +72,7 @@
                     <div class="dados">
                         <span class="titulo">Residência:</span>
                         <span id="endereco-residencia">CASA S/Nº</span>
-                        
+
                         <br> <span id="bairro-residencia">SAPÚ II</span>
                         <br> <span id="municipio-residencia">KILAMBA KIAXI</span>
                     </div>
@@ -126,19 +127,20 @@
     <footer>
         <p>&copy; 2022 - Epifânio Francisco</p>
         <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="https://www.facebook.com/ACEDE-105470194242383/?ref=pages_you_manage" target="_blank">
-                            <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>        
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="https://github.com/epifaniofrancisco" target="_blank">
-                            <li class="item-social-media">
-                                <i class="fab fa-github"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div>
+            <ul class="list-social-media">
+                <a class="link-social-media" href="https://www.facebook.com/ACEDE-105470194242383/?ref=pages_you_manage"
+                    target="_blank">
+                    <li class="item-social-media">
+                        <i class="fab fa-facebook-f"></i>
+                    </li>
+                </a>
+                <a class="link-social-media" href="https://github.com/epifaniofrancisco" target="_blank">
+                    <li class="item-social-media">
+                        <i class="fab fa-github"></i>
+                    </li>
+                </a>
+            </ul>
+        </div>
     </footer>
 
 </body>
