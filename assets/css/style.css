@@ -79,20 +79,28 @@ main {
     font-size: 18px;
     display: block;
     padding: 0.75rem;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
 }
 
-.topo .card form .input-group input:focus {
-    border: 1px solid black;
-    outline: #B61819;
+.topo .card form .input-group.error input {
+    border: 2px solid #db5a5a;
+}
+
+.topo .card form .input-group.success input {
+    border: 2px solid green;
 }
 
 .topo .card form .input-group .error {
     display: flex;
+    visibility: hidden;
     margin-top: 2px;
     padding: 0;
     margin-bottom: 15px;
+}
+
+.topo .card form .input-group.error .error {
+    visibility: visible;
 }
 
 .topo .card form .input-group .error.active {
