@@ -1,472 +1,487 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url("../fonts/Roboto/Roboto-Light.ttf");
+	font-family: "Roboto";
+	src: url("../fonts/Roboto/Roboto-Light.ttf");
 }
 
 :root {
-    --gradient: linear-gradient(90deg, #B61819, #C21919, #9C1414);
+	--gradient: linear-gradient(90deg, #b61819, #c21919, #9c1414);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto";
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto";
+	letter-spacing: 0.5px;
 }
 
 main {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 /* Primeiro elemento */
 .principal {
-    width: 100%;
-    height: 90vh;
-    background-color: white;
+	width: 100%;
+	height: 90vh;
+	background-color: white;
 }
 
 .topo {
-    width: 100%;
-    height: 300px;
-    background: var(--gradient);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+	width: 100%;
+	height: 300px;
+	background: var(--gradient);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
 }
 
 .topo h1 {
-    margin: 90px 0px 15px 0px;
+	margin: 90px 0px 15px 0px;
 }
 
 .topo p {
-    font-size: 18px;
-    text-align: center;
+	font-size: 18px;
+	text-align: center;
 }
 
 .topo .card {
-    width: 500px;
-    height: 270px;
-    background-color: white;
-    color: black;
-    border: 0.5px solid black;
-    position: absolute;
-    top: 210px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	width: 500px;
+	height: 270px;
+	background-color: white;
+	color: black;
+	border: 0.5px solid black;
+	position: absolute;
+	top: 210px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .topo .card h2 {
-    color: #B61819;
-    margin: 20px 0px 30px 0px;
+	color: #c21919;
+	margin: 20px 0px 30px 0px;
 }
 
 .topo .card form {
-    width: 440px;
-    display: flex;
-    flex-direction: column;
+	width: 440px;
+	display: flex;
+	flex-direction: column;
 }
 
 .topo .card form .input-group label {
-    font-size: 20px;
-    display: block;
-    margin-bottom: 0.5rem;
+	font-size: 20px;
+	display: block;
+	margin-bottom: 0.5rem;
 }
 
-.topo .card form .input-group input[type=text] {
-    width: 100%;
-    height: 44px;
-    font-size: 18px;
-    display: block;
-    padding: 0.75rem;
-    border: 2px solid #8c8c8c;
-    border-radius: 5px;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-  }
-  
-.topo .card form .input-group input[type=text]:focus {
-    border: 2px solid black;
-  }
+.topo .card form .input-group input {
+	width: 100%;
+	height: 44px;
+	font-size: 18px;
+	display: block;
+	padding: 0.75rem;
+	border: 2px solid #8c8c8c;
+	border-radius: 5px;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+}
 
+.topo .card form .input-group input:focus {
+	border: 2px solid black;
+}
 
 .topo .card form .input-group.error input {
-    border: 2px solid #db5a5a;
+	border: 2px solid #db5a5a;
 }
 
 .topo .card form .input-group.success input {
-    border: 2px solid green;
+	border: 2px solid green;
 }
 
 .topo .card form .input-group .error {
     display: flex;
-    visibility: hidden;
-    margin-top: 2px;
-    padding: 0;
-    margin-bottom: 15px;
+	visibility: hidden;
+	margin-top: 2px;
+	padding: 0;
+	margin-bottom: 15px;
 }
 
 .topo .card form .input-group.error .error {
-    visibility: visible;
+	visibility: visible;
 }
 
 .topo .card form .input-group .error.active {
-    border: 1px solid red;
-    padding: 0.4rem;
+	border: 1.5px solid #db5a5a;
+	padding: 0.4rem;
 }
 
 .topo .card form button {
-    width: 100%;
-    height: 44px;
-    background: #C21919;
-    color: white;
-    font-size: 22px;
-    display: block;
-    border: 1px solid white;
-    cursor: pointer;
-    outline: var(--gradient);
+	width: 100%;
+	height: 44px;
+	background: #c21919;
+	color: white;
+	font-size: 22px;
+	display: block;
+	border: 1px solid #c21919;
+	cursor: pointer;
+	outline: var(--gradient);
 }
 
-.topo .card form button:hover{
-    background-color: #9C1414;
-    transition: 0.3s ease-in-out;
+.topo .card form button:hover {
+	background-color: #9c1414;
+	transition: 0.3s ease-in-out;
 }
-
 
 /* Bilhetes de identidade */
 .bilhetes {
-    width: 100%;
-    height: 405px;
-    background: var(--gradient);
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 100px;
-    padding: 0px 32px;
-    animation-name: animar;
-    animation-duration: .8s;
-    animation-fill-mode: both;
+	width: 100%;
+	height: 405px;
+	background: var(--gradient);
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 100px;
+	padding: 0px 32px;
+	animation-name: animar;
+	animation-duration: 0.8s;
+	animation-fill-mode: both;
 }
 
 /* Animação */
 @keyframes animar {
-    from {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    to {
-        opacity: 1;
-    }
+	from {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	to {
+		opacity: 1;
+	}
 }
-
 
 /* Frontal */
 .bilhetes .bilhete-frontal {
-    width: 500px;
-    height: 305px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 12px 32px 2px 32px;
+	width: 500px;
+	height: 305px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 12px 32px 2px 32px;
 }
 
 .bilhete-frontal .imgs {
-    display: flex;
-    justify-content: space-between;
-    margin: 3px;
+	display: flex;
+	justify-content: space-between;
+	margin: 3px;
 }
 
 .bilhete-frontal img {
-    width: 40px;
-    height: 45px;
+	width: 40px;
+	height: 45px;
 }
 
 .bilhete-frontal .titulo {
-    display: block;
-    font-size: 17px;
-    font-weight: 600;
-    margin: 3px 0px;
+	display: block;
+	font-size: 17px;
+	font-weight: 600;
+	margin: 3px 0px;
 }
 
-.bilhete-frontal .dados span{
-    font-size: 16px;
-    display: block;
+.bilhete-frontal .dados span {
+	font-size: 16px;
+	display: block;
 }
 
 .bilhete-frontal .dados #numero-bi {
-    font-size: 18px;
-    font-weight: 600;
+	font-size: 18px;
+	font-weight: 600;
 }
 
 /* Traseiro */
 .bilhetes .bilhete-traseiro {
-    width: 500px;
-    height: 305px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 12px 32px 2px 32px;
+	width: 500px;
+	height: 305px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 12px 32px 2px 32px;
 }
 
 .bilhete-traseiro .dados {
-    margin: 4px 0px;
+	margin: 4px 0px;
 }
 
 .bilhete-traseiro .dados .titulo {
-    font-size: 17px;
-    font-weight: 600;
+	font-size: 17px;
+	font-weight: 600;
 }
 
-.bilhete-traseiro .dados span{
-    font-size: 16px;
-    display: inline;
-    margin: 4px 0px;
+.bilhete-traseiro .dados span {
+	font-size: 16px;
+	display: inline;
+	margin: 4px 0px;
 }
 
-.bilhete-traseiro .dados #endereco-residencia, #provincia-nascimento, #data-nascimento, #altura, #estado-civil {
-    margin-left: 15px;
+.bilhete-traseiro .dados #endereco-residencia,
+#provincia-nascimento,
+#data-nascimento,
+#altura,
+#estado-civil {
+	margin-left: 15px;
 }
 
-.bilhete-traseiro .dados #sexo, #data-emissao {
-    margin: 0px 30px 0px 15px;
+.bilhete-traseiro .dados #sexo,
+#data-emissao {
+	margin: 0px 30px 0px 15px;
 }
 
 .bilhete-traseiro .dados .codigo-barra {
-    width: 200px;
-    height: 30px;
-    margin-top: 7px;
+	width: 200px;
+	height: 30px;
+	margin-top: 7px;
 }
 
 .bilhete-traseiro .dados .codigo-barra img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
-
 
 /* Footer */
 footer {
-    width: 100%;
-    height: 80px;
-    background-color: #750F0F;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 45px;
+	width: 100%;
+	height: 80px;
+	background-color: #750f0f;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 45px;
 }
 
 footer p {
-    font-size: 18px;
+	font-size: 18px;
 }
 
-.link-social-media:first-child{
-    margin-right: 25px;
+.link-social-media:first-child {
+	margin-right: 25px;
 }
 
 .link-social-media .item-social-media {
-    transition: background-color .5s;
+	transition: background-color 0.5s;
 }
 
-.link-social-media:hover .item-social-media{
-    background-color: black;
-    border-color: transparent;
+.link-social-media:hover .item-social-media {
+	background-color: black;
+	border-color: transparent;
 }
 
 .list-social-media {
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    list-style: none;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	list-style: none;
 }
 
 .item-social-media {
-    border: 1px solid #bdc3c7;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: white;
+	border: 1px solid #bdc3c7;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: white;
 }
 
 /* Media Queries */
 @media screen and (max-width: 1100px) {
-    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
-        width: 450px;
-    }
+	main .bilhetes .bilhete-frontal,
+	main .bilhetes .bilhete-traseiro {
+		width: 450px;
+	}
 
-    main .bilhetes .bilhete-frontal .titulo, main .bilhetes .bilhete-traseiro .dados .titulo {
-        font-size: 16px;
-    }
+	main .bilhetes .bilhete-frontal .titulo,
+	main .bilhetes .bilhete-traseiro .dados .titulo {
+		font-size: 16px;
+	}
 
-    main .bilhetes .bilhete-frontal span, main .bilhetes .bilhete-traseiro .dados span {
-        font-size: 15px;
-    }
+	main .bilhetes .bilhete-frontal span,
+	main .bilhetes .bilhete-traseiro .dados span {
+		font-size: 15px;
+	}
 }
 
 @media screen and (max-width: 1000px) {
-    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
-        width: 400px;
-    }
+	main .bilhetes .bilhete-frontal,
+	main .bilhetes .bilhete-traseiro {
+		width: 400px;
+	}
 
-    main .bilhetes .bilhete-traseiro .dados .codigo-barra {
-        height: 30px;
-        margin-top: 2px;
-    } 
+	main .bilhetes .bilhete-traseiro .dados .codigo-barra {
+		height: 30px;
+		margin-top: 2px;
+	}
 }
 
 @media screen and (max-width: 900px) {
-    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
-        width: 370px;
-    }
+	main .bilhetes .bilhete-frontal,
+	main .bilhetes .bilhete-traseiro {
+		width: 370px;
+	}
 
-    main .bilhetes .bilhete-frontal .titulo, main .bilhetes .bilhete-traseiro .dados .titulo {
-        font-size: 14px;
-    }
+	main .bilhetes .bilhete-frontal .titulo,
+	main .bilhetes .bilhete-traseiro .dados .titulo {
+		font-size: 14px;
+	}
 
-    main .bilhetes .bilhete-frontal span, main .bilhetes .bilhete-traseiro .dados span {
-        font-size: 13px;
-    }
+	main .bilhetes .bilhete-frontal span,
+	main .bilhetes .bilhete-traseiro .dados span {
+		font-size: 13px;
+	}
 }
 
 @media screen and (max-width: 800px) {
-    main .topo h1 {
-        font-size: 26px;
-    }
+	main .topo h1 {
+		font-size: 26px;
+	}
 
-    main .topo p {
-        width: 500px;
-        font-size: 16px;
-    }
+	main .topo p {
+		width: 500px;
+		font-size: 16px;
+	}
 
-    main .topo .card {
-        width: 450px;
-    }
+	main .topo .card {
+		width: 450px;
+	}
 
-    main .topo .card form {
-        width: 400px;
-    }
+	main .topo .card form {
+		width: 400px;
+	}
 
-    main .bilhetes {
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+	main .bilhetes {
+		height: 100%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
-    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
-        width: 500px;
-        height: 100%;
-        margin-top: 42px;
-    }
+	main .bilhetes .bilhete-frontal,
+	main .bilhetes .bilhete-traseiro {
+		width: 500px;
+		height: 100%;
+		margin-top: 42px;
+	}
 
-    main .bilhetes .bilhete-traseiro {
-        margin-bottom: 42px;
-    }
+	main .bilhetes .bilhete-traseiro {
+		margin-bottom: 42px;
+	}
 }
 
 @media screen and (max-width: 560px) {
-    main .topo h1 {
-        font-size: 22px;
-    }
+	main .topo h1 {
+		font-size: 22px;
+	}
 
-    main .topo p {
-        width: 450px;
-        font-size: 15px;
-    }
+	main .topo p {
+		width: 450px;
+		font-size: 15px;
+	}
 
-    main .topo .card {
-        width: 430px;
-    }
+	main .topo .card {
+		width: 430px;
+	}
 
-    main .topo .card form {
-        width: 380px;
-    }
+	main .topo .card form {
+		width: 380px;
+	}
 
-    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
-        width: 450px;
-        height: 100%;
-        margin-top: 42px;
-    }
+	main .bilhetes .bilhete-frontal,
+	main .bilhetes .bilhete-traseiro {
+		width: 450px;
+		height: 100%;
+		margin-top: 42px;
+	}
 
-    main .bilhetes .bilhete-traseiro {
-        margin-bottom: 42px;
-    }
+	main .bilhetes .bilhete-traseiro {
+		margin-bottom: 42px;
+	}
 }
 
 @media screen and (max-width: 500px) {
-    main .topo h1 {
-        font-size: 20px;
-    }
+	main .topo h1 {
+		font-size: 20px;
+	}
 
-    main .topo p {
-        width: 400px;
-        font-size: 14px;
-    }
+	main .topo p {
+		width: 400px;
+		font-size: 14px;
+	}
 
-    main .topo .card {
-        width: 400px;
-    }
+	main .topo .card {
+		width: 400px;
+	}
 
-    main .topo .card form {
-        width: 350px;
-    }
+	main .topo .card form {
+		width: 350px;
+	}
 
-    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
-        width: 400px;
-        height: 100%;
-        margin-top: 42px;
-    }
+	main .bilhetes .bilhete-frontal,
+	main .bilhetes .bilhete-traseiro {
+		width: 400px;
+		height: 100%;
+		margin-top: 42px;
+	}
 
-    main .bilhetes .bilhete-traseiro {
-        margin-bottom: 42px;
-    }
+	main .bilhetes .bilhete-traseiro {
+		margin-bottom: 42px;
+	}
 }
 
 @media screen and (max-width: 450px) {
-    main .topo h1 {
-        font-size: 17px;
-    }
+	main .topo h1 {
+		font-size: 17px;
+	}
 
-    main .topo p {
-        width: 330px;
-        font-size: 13px;
-    }
+	main .topo p {
+		width: 330px;
+		font-size: 13px;
+	}
 
-    main .topo .card {
-        width: 300px;
-    }
+	main .topo .card {
+		width: 300px;
+	}
 
-    main .topo .card form {
-        width: 280px;
-    }
+	main .topo .card form {
+		width: 280px;
+	}
 
-    main .bilhetes .bilhete-frontal, main .bilhetes .bilhete-traseiro {
-        width: 340px;
-        height: 100%;
-        margin-top: 42px;
-    }
+	main .bilhetes .bilhete-frontal,
+	main .bilhetes .bilhete-traseiro {
+		width: 340px;
+		height: 100%;
+		margin-top: 42px;
+	}
 
-    main .bilhetes .bilhete-traseiro {
-        margin-bottom: 42px;
-    }
+	main .bilhetes .bilhete-traseiro {
+		margin-bottom: 42px;
+	}
 
-    main .bilhetes .bilhete-frontal .titulo, main .bilhetes .bilhete-traseiro .dados .titulo {
-        font-size: 14px;
-    }
+	main .bilhetes .bilhete-frontal .titulo,
+	main .bilhetes .bilhete-traseiro .dados .titulo {
+		font-size: 14px;
+	}
 
-    main .bilhetes .bilhete-frontal span, main .bilhetes .bilhete-traseiro .dados span {
-        font-size: 13px;
-    }
-    
-    main .bilhetes .bilhete-traseiro .dados .codigo-barra {
-        width: 150px;
-        height: 22px;
-    }
+	main .bilhetes .bilhete-frontal span,
+	main .bilhetes .bilhete-traseiro .dados span {
+		font-size: 13px;
+	}
+
+	main .bilhetes .bilhete-traseiro .dados .codigo-barra {
+		width: 150px;
+		height: 22px;
+	}
 }

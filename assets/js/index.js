@@ -1,5 +1,4 @@
 var principal = document.querySelector(".principal");
-var btnVerificar = document.getElementById("verificar");
 var bilhetes = document.querySelector(".bilhetes");
 const form = document.getElementById("form");
 const inputBI = document.getElementById("numero-bi-input");
@@ -43,7 +42,6 @@ function checkInputs() {
 
 	if (inputValue === "") {
 		// mostrar erro
-		// add classe
 		setErrorFor(inputBI, "Preencha esse campo");
 	} else if (!validarBI(inputValue)) {
 		setErrorFor(inputBI, "Digite um número de BI válido");
@@ -51,23 +49,23 @@ function checkInputs() {
 		// adicionar a classe de sucesso
 		setSuccessFor(inputBI);
 		showData();
-		showBI();
 	}
 }
 
 function setErrorFor(input, message) {
-	const formControl = input.parentElement;
-	const span = formControl.querySelector("span");
+	const inputGroup = input.parentElement;
+	const span = inputGroup.querySelector("span");
 
 	span.innerText = message;
 	span.classList.add("active");
-	formControl.className = "input-group error";
+	inputGroup.className = "input-group error";
+	inputBI.focus()
 }
 
 function setSuccessFor(input) {
-	const formControl = input.parentElement;
+	const inputGroup = input.parentElement;
 
-	formControl.className = "input-group success";
+	inputGroup.className = "input-group success";
 }
 
 function validarBI(bi) {
@@ -77,18 +75,14 @@ function validarBI(bi) {
 }
 
 function showBI() {
-	btnVerificar.addEventListener("click", () => {
-		principal.style.height = "403px";
-		bilhetes.style.display = "flex";
-	});
+	principal.style.height = "403px";
+	bilhetes.style.display = "flex";
 }
 
 function showData() {
-	const oi = inputBI.value.trim();
+	const oi = inputBI.value.trim().toUpperCase();
 
 	const API = `https://api.gov.ao/consultarBI/v2/?bi=${oi}`;
-
-	
 
 	function getAPI(url) {
 		let request = new XMLHttpRequest();
@@ -131,6 +125,7 @@ function showData() {
 	if (dados.length === 0) {
 		setErrorFor(inputBI, "Esse número do BI não existe! Tente novamente")
 	} else {
+		showBI();
 		postData();
 	}
 }
