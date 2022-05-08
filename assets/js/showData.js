@@ -1,3 +1,9 @@
+import { getAPI } from "./getAPI.js";
+import { setErrorFor } from "./index.js";
+
+const INPUT = document.getElementById("numero-bi-input");
+var principal = document.querySelector(".principal");
+var bilhetes = document.querySelector(".bilhetes");
 
 // Bilhete parte frontal
 var primeiroNome = document.getElementById("primeiro-nome");
@@ -26,20 +32,12 @@ var estadoCivil = document.getElementById("estado-civil");
 var dataEmissao = document.getElementById("data-emissao");
 var dataValidade = document.getElementById("data-validade");
 
-const API = `https://api.gov.ao/consultarBI/v2/?bi=006677901LA049`;
-
-function getAPI(url) {
-	let request = new XMLHttpRequest();
-	request.open("GET", url, false);
-	request.send();
-
-	return request.responseText;
+function showBI() {
+	principal.style.height = "403px";
+	bilhetes.style.display = "flex";
 }
 
-var resposta = getAPI(API);
-var dados = JSON.parse(resposta);
-
-function postData() {
+function postData(dados) {
 	primeiroNome.innerHTML = dados[0]["FIRST_NAME"];
 	ultimoNome.innerHTML = dados[0]["LAST_NAME"];
 
@@ -66,5 +64,17 @@ function postData() {
 	dataValidade.innerHTML = dados[0]["EXPIRY_DATE"];
 }
 
-postData();
+export function showData() {
+	const INPUT2 = INPUT.value.trim().toUpperCase();
+	const API = `https://api.gov.ao/consultarBI/v2/?bi=${INPUT2}`;
 
+	var resposta = getAPI(API);
+	var dados = JSON.parse(resposta);
+
+	if (dados.length === 0) {
+		setErrorFor(INPUT, "Esse número do BI não existe! Tente novamente");
+	} else {
+		showBI();
+		postData(dados);
+	}
+}

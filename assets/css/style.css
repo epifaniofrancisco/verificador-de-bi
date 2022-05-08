@@ -163,16 +163,16 @@ main {
 	}
 }
 
-/* Frontal */
-.bilhetes .bilhete-frontal {
+.bi {
 	width: 500px;
 	height: 305px;
-	background-color: white;
+	background: linear-gradient(90deg, #E8E0E5, #F2E2DA,#E6D7D0);
 	display: flex;
 	flex-direction: column;
 	padding: 12px 32px 2px 32px;
 }
 
+/* Frontal */
 .bilhete-frontal .imgs {
 	display: flex;
 	justify-content: space-between;
@@ -198,18 +198,10 @@ main {
 
 .bilhete-frontal .dados #numero-bi {
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: bold;
 }
 
 /* Traseiro */
-.bilhetes .bilhete-traseiro {
-	width: 500px;
-	height: 305px;
-	background-color: white;
-	display: flex;
-	flex-direction: column;
-	padding: 12px 32px 2px 32px;
-}
 
 .bilhete-traseiro .dados {
 	margin: 4px 0px;
@@ -267,8 +259,12 @@ footer p {
 	font-size: 18px;
 }
 
-.link-social-media:first-child {
-	margin-right: 25px;
+.link-social-media {
+	margin-right: 10px;
+}
+
+.link-social-media:last-child {
+	margin-right: 0;
 }
 
 .link-social-media .item-social-media {
