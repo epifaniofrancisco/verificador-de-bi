@@ -45,7 +45,7 @@ Baixe os arquivos disponíveis e abra eles no seu navegador para ver o projecto 
 - [HTML](https://www.w3schools.com/html/)
 - [CSS](https://www.w3schools.com/css/)
 - [JAVASCRIPT](https://www.w3schools.com/js/)
-- 
+
 ## 💪 Como contribuir para o projecto
 1. Faça um **fork** do projeto.
 2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
