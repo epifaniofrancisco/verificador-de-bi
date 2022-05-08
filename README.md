@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>❤🤍 Verificador de Bilhete de Identidade</h1>
+  <h1>❤🤍 Verificador de Bilhete de Identidade ❤🤍</h1>
 </div>
 
 <h4 align="center"> 
