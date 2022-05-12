@@ -5,6 +5,12 @@
 
 :root {
 	--gradient: linear-gradient(90deg, #b61819, #c21919, #9c1414);
+	--gradient-bi: linear-gradient(
+		125deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 250, 145, 1) 100%,
+		rgba(245, 239, 115, 1) 100%
+	);
 }
 
 * {
@@ -104,7 +110,7 @@ main {
 }
 
 .topo .card form .input-group .error {
-    display: flex;
+	display: flex;
 	visibility: hidden;
 	margin-top: 2px;
 	padding: 0;
@@ -166,7 +172,8 @@ main {
 .bi {
 	width: 500px;
 	height: 305px;
-	background: linear-gradient(90deg, #E8E0E5, #F2E2DA,#E6D7D0);
+	background: rgb(255, 255, 255);
+	background: var(--gradient-bi);
 	display: flex;
 	flex-direction: column;
 	padding: 12px 32px 2px 32px;
