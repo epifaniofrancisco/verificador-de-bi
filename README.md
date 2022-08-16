@@ -24,9 +24,9 @@
 - <a href="https://epifaniofrancisco.github.io/verificador-de-bi/" target="_blank">Verificador de BI</a>
 
 ## 🎨 Layout
-![Captura de Ecrã (141)](https://user-images.githubusercontent.com/81193129/167294277-73e7b06c-d8c6-46a7-a28f-8e26e60257b5.png)
+![bi (1)](https://user-images.githubusercontent.com/81193129/184925050-01416851-f7f7-43f3-90c6-d46358a26bc2.png)
 
-![Captura de Ecrã (142)](https://user-images.githubusercontent.com/81193129/167294337-ba032cf4-368f-4001-a3e7-52cb39d1ae14.png)
+![bi (2)](https://user-images.githubusercontent.com/81193129/184925353-38773897-ccda-413b-a6ce-37a972294291.png)
 
 ## 📁 Acesso ao Projecto
 Você pode [acessar o código fonte do projecto inicial](https://github.com/epifaniofrancisco/verificador-de-bi/tree/main) ou [baixá-lo](https://github.com/epifaniofrancisco/verificador-de-bi/archive/refs/heads/main.zip).
