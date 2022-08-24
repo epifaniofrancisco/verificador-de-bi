@@ -20,8 +20,12 @@
 ## 📝 Descrição do Projecto
 **Verificador de Bilhete de Identidade** –  é um projecto Open-Source que permite as pessoas verificarem ou consultarem os seus dados do BI online com o seu número do bilhete.
 
-## 🎮 Demonstração
-- <a href="https://epifaniofrancisco.github.io/verificador-de-bi/" target="_blank">Verificador de BI</a>
+### Funcionalidades
+
+* [x] Consultar os dados do BI do usuário
+
+## 🎮 Website
+- <a href="https://verificadorbiangola.vercel.app" target="_blank">Verificador de Bilhete de Identidade</a>
 
 ## 🎨 Layout
 ![bi (1)](https://user-images.githubusercontent.com/81193129/184925050-01416851-f7f7-43f3-90c6-d46358a26bc2.png)
